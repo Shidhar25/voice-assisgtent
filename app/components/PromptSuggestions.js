@@ -12,19 +12,19 @@ export default function PromptSuggestions() {
   return (
     <>
       <PromptSuggestion
-        icon="⛅"
-        purpose="I'm updating my wardrobe for fall."
-        question="What are some staple items I should add?"
+        icon="🚑"
+        purpose="Medical Emergency"
+        question="Someone is unconscious and not breathing"
       />
       <PromptSuggestion
-        icon="🍴"
-        purpose="I have eggs, tomatoes and onions."
-        question="What are 5 dishes I can make?"
+        icon="🔥"
+        purpose="Fire Emergency"
+        question="There's a house fire with people trapped inside"
       />
       <PromptSuggestion
-        icon="🖥️"
-        purpose="I'm prepping for a job interview."
-        question="Can you role play with me to help me prepare?"
+        icon="🚔"
+        purpose="Police Emergency"
+        question="There's a break-in happening right now"
       />
     </>
   );

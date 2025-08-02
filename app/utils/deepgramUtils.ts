@@ -61,7 +61,7 @@ export interface LlmFunction {
   name: string;
   description: string;
   parameters: LlmParameterObject | Record<string, never>;
-  endpoint: {
+  endpoint?: {
     url: string;
     headers: Record<string, string>;
     method: string;
@@ -82,7 +82,9 @@ export interface LlmParameterObject extends LlmParameterBase {
 }
 
 export interface LlmParameterScalar extends LlmParameterBase {
-  type: "string" | "integer";
+  type: "string" | "integer" | "number" | "boolean";
+  minimum?: number;
+  maximum?: number;
 }
 
 export interface Voice {
