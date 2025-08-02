@@ -25,6 +25,7 @@ import { useStsQueryParams } from "./hooks/UseStsQueryParams";
 import { useDeepgram } from "./context/DeepgramContextProvider";
 import BehindTheScenes from "./components/BehindTheScenes";
 
+
 const DesktopMenuItems = () => {
   const { prompt } = useStsQueryParams();
   return (
@@ -106,23 +107,24 @@ export default function Home() {
 
           {/* Right Panel (Desktop only) */}
           <div
-            className="hidden md:block p-6 pl-0 max-h-screen overflow-hidden"
+            className="hidden md:block p-6 pl-0 max-h-screen overflow-hidden w-96"
             style={{ zIndex: 11 }}
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 h-full">
+
+              
+              {/* Backstage Panel */}
               {behindTheScenesOpen ? (
                 <BehindTheScenes onClose={() => setBehindTheScenesOpen(false)} />
               ) : (
-                <>
-                  <button
-                    className="w-full px-4 py-3 bg-gray-850 hover:bg-gray-800 text-gray-25 rounded-lg transition-colors flex items-center gap-2"
-                    onClick={() => setBehindTheScenesOpen(true)}
-                  >
-                    <TerminalIcon className="w-5 h-5" />
-                    <span className="font-medium flex-grow text-left">Backstage</span>
-                    <CaretIcon className="w-5 h-5" />
-                  </button>
-                </>
+                <button
+                  className="w-full px-4 py-3 bg-gray-850 hover:bg-gray-800 text-gray-25 rounded-lg transition-colors flex items-center gap-2 flex-shrink-0"
+                  onClick={() => setBehindTheScenesOpen(true)}
+                >
+                  <TerminalIcon className="w-5 h-5" />
+                  <span className="font-medium flex-grow text-left">Backstage</span>
+                  <CaretIcon className="w-5 h-5" />
+                </button>
               )}
             </div>
           </div>
