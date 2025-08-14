@@ -9,11 +9,11 @@ interface Props {
 const LogoLink: FC<Props> = ({ href }) => (
   <a className="flex items-center" href={href}>
     <Image
-      className="w-auto h-6 max-w-[12.5rem] sm:max-w-none"
-      src={withBasePath("/deepgram.svg")}
+      className="w-auto h-20 max-w-[50rem] sm:max-w-none"
+      src={withBasePath("/react-logo.png")}
       alt="Deepgram Logo"
-      width={0}
-      height={0}
+      width={320} // set actual width
+      height={80} // set actual height
       priority
     />
   </a>
